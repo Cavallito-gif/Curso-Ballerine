@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página inicial</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #38251f;
+            /* Fundo neutro */
+        }
+
+        .container {
+            text-align: center;
+            background-color: #CBBBA7;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 90%;
+            max-width: 600px;
+            border: 2px solid #8B7D70;
+        }
+
+        h1 {
+            color: #331F19;
+        }
+
+        p {
+            color: #331F19;
+            font-size: 1.1em;
+        }
+
+        button {
+            background-color: #60041A;
+            color: #F4F0EA;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+            transition: background-color 0.3s ease;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            background-color: #A34743;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Boas vindas!</h1>
+        <p>Vamos personalizar sua saudação usando JavaScript!</p>
+        <div class="saudacao" id="mensagemSaudacao">Olá, visitante!</div>
+        <p>Qual é seu nome: <input type="text" id="txtn"></p>
+        <p>Qual a sua idade: <input type="number" name="txti" id="txti"></p>
+        <button onclick="clicar()">Confirmar</button>
+    </div>
+
+    <script>
+        function clicar() {
+            let nome = document.getElementById('txtn').value
+            let idade = document.getElementById('txti').value
+            if (idade >= 1 && idade <= 99) {
+            document.getElementById('mensagemSaudacao').innerHTML = `Olá, ${nome} você tem ${idade} anos`
+            } else {
+                alert('Complete o campo de pesquisa')
+            }
+        }
+    </script>
+</body>
+
+</html>

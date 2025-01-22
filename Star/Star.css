@@ -1,0 +1,36 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    background-image: linear-gradient(to bottom, blue, rgb(0, 89, 255),rgb(70, 70, 243),rgb(197, 103, 15));
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+}
+
+.icone {
+    width: 30px;
+    height: 30px;
+    background-image: url(Design_sem_nome-removebg-preview.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    animation: anima 5s linear infinite;
+    animation-duration: calc(300s / var(--i));
+
+}
+
+@keyframes anima {
+    0% {
+        transform: translateY(100vh) scale(0) rotate(0deg);
+    }
+
+    100% {
+        transform: translateY(-10vh) scale(1) rotate(360deg);
+    }
+
+}
